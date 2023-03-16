@@ -7,7 +7,7 @@ dependencies:
   - pip
   - jupyter
   - notebook
-  - nbdev
+  - fastai::nbdev
   - pip:
     - numpy
     - pandas
