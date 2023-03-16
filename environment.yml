@@ -1,0 +1,23 @@
+name: VRland
+channels:
+  - conda-forge
+  - fastai
+dependencies:
+  - python=3.10.*
+  - pip
+  - jupyter
+  - notebook
+  - nbdev
+  - pip:
+    - numpy
+    - pandas
+    # - networkx
+    # - scikit-learn
+    # - scipy
+    # - matplotlib
+    # - descartes
+    # - alphashape
+    # - shapely
+    # - plotly
+    # - graphtools
+    # - pygsp
