@@ -5,4 +5,5 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://FerranC96.github.io',
                 'git_url': 'https://github.com/FerranC96/VRland',
                 'lib_path': 'VRland'},
-  'syms': {'VRland.core': {'VRland.core.foo': ('core.html#foo', 'VRland/core.py')}}}
+  'syms': { 'VRland.core': { 'VRland.core.foo': ('core.html#foo', 'VRland/core.py'),
+                             'VRland.core.say_hi': ('core.html#say_hi', 'VRland/core.py')}}}
