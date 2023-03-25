@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "VRland",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "VRland",
+    "section": "Install",
+    "text": "Install\npip install VRland"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "VRland",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2\n\n\n\nsay_hi(\"Jeremy\")\n\n'Hi Jeremy!'"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nsay_hi\n\n say_hi (to)\n\nSalute someone\n\nsource\n\n\nfoo\n\n foo ()\n\n\ntest_eq(say_hi(\"Jeremy\"), \"Hi Jeremy!\")"
+  }
+]
