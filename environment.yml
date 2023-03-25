@@ -8,9 +8,13 @@ dependencies:
   - jupyter
   - notebook
   - fastai::nbdev
-  - pip:
-    - numpy
-    - pandas
+  - numpy
+  - pandas
+  - r-base
+  - r-rmarkdown
+#  - pip:
+    # - numpy
+    # - pandas
     # - networkx
     # - scikit-learn
     # - scipy
