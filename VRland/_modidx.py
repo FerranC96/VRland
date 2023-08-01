@@ -6,4 +6,8 @@ d = { 'settings': { 'branch': 'main',
                 'git_url': 'https://github.com/FerranC96/VRland',
                 'lib_path': 'VRland'},
   'syms': { 'VRland.core': { 'VRland.core.foo': ('core.html#foo', 'VRland/core.py'),
-                             'VRland.core.say_hi': ('core.html#say_hi', 'VRland/core.py')}}}
+                             'VRland.core.say_hi': ('core.html#say_hi', 'VRland/core.py')},
+            'VRland.land': {'VRland.land.foo': ('landscape.html#foo', 'VRland/land.py')},
+            'VRland.plot': {'VRland.plot.foo': ('plot.html#foo', 'VRland/plot.py')},
+            'VRland.score': { 'VRland.score.compute_distdeg': ('score.html#compute_distdeg', 'VRland/score.py'),
+                              'VRland.score.foo': ('score.html#foo', 'VRland/score.py')}}}
