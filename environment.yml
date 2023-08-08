@@ -1,4 +1,4 @@
-name: VRland
+name: vrland_dev
 channels:
   - conda-forge
   - fastai
@@ -10,8 +10,14 @@ dependencies:
   - fastai::nbdev
   - numpy
   - pandas
-  - r-base
-  - r-rmarkdown
+  - panel
+  - bokeh::jupyter_bokeh
+  - graphtools
+  - scipy
+  - scikit-learn
+  - plotly
+  - matplotlib
+
 #  - pip:
     # - numpy
     # - pandas

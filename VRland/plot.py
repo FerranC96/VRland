@@ -3,9 +3,9 @@
 # %% auto 0
 __all__ = ['foo']
 
-# %% ../nbs/02_plot.ipynb 3
+# %% ../nbs/02_plot.ipynb 4
 #| export
 
 
-# %% ../nbs/02_plot.ipynb 4
+# %% ../nbs/02_plot.ipynb 5
 def foo(): pass
