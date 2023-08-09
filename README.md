@@ -8,7 +8,7 @@ landscapes.
 
 For an example of the current implementation as a single Jupyter
 Notebook, please see the work on [Qin & Cardoso Rodriguez *et al.*
-2023](https://doi.org/10.1101/2023.02.15.528008) and it’s [associated
+2023](https://doi.org/10.1101/2023.02.15.528008) and its [associated
 GitHub
 repository](https://github.com/TAPE-Lab/Qin-CardosoRodriguez-et-al) (VR
 score and landscape generation can be found within the Figure 7
