@@ -1,0 +1,33 @@
+name: vrland_dev
+channels:
+  - conda-forge
+  - fastai
+dependencies:
+  - python=3.10.*
+  - pip
+  - jupyter
+  - notebook
+  - fastai::nbdev
+  - numpy
+  - pandas
+  - panel
+  - bokeh::jupyter_bokeh
+  - graphtools
+  - scipy
+  - scikit-learn
+  - plotly
+  - matplotlib
+
+#  - pip:
+    # - numpy
+    # - pandas
+    # - networkx
+    # - scikit-learn
+    # - scipy
+    # - matplotlib
+    # - descartes
+    # - alphashape
+    # - shapely
+    # - plotly
+    # - graphtools
+    # - pygsp

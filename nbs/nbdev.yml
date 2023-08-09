@@ -2,8 +2,8 @@ project:
   output-dir: _docs
 
 website:
-  title: "VRland"
-  site-url: "https://FerranC96.github.io/VRland"
+  title: "vrland"
+  site-url: "https://FerranC96.github.io/vrland"
   description: "Valley-Ridge score and single-cell Waddington-like landscapes"
   repo-branch: main
-  repo-url: "https://github.com/FerranC96/VRland"
+  repo-url: "https://github.com/FerranC96/vrland"
