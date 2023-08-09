@@ -3,10 +3,10 @@
 # %% auto 0
 __all__ = ['foo', 'check_inversevvl', 'scale_metrics', 'compute_distdeg', 'bycluster_median', 'compute_vr_scores']
 
-# %% ../nbs/00_score.ipynb 3
+# %% ../nbs/00_score.ipynb 4
 def foo(): pass
 
-# %% ../nbs/00_score.ipynb 11
+# %% ../nbs/00_score.ipynb 12
 def check_inversevvl(dataframe, param_dict):
 
     if param_dict["dynamic"] == "velocity_length":
@@ -16,7 +16,7 @@ def check_inversevvl(dataframe, param_dict):
     
     return dataframe, param_dict
 
-# %% ../nbs/00_score.ipynb 13
+# %% ../nbs/00_score.ipynb 14
 def scale_metrics(dataframe, metrics = ["CCAT","inverse_vvl"]):
     
     from sklearn.preprocessing import MinMaxScaler
@@ -26,7 +26,7 @@ def scale_metrics(dataframe, metrics = ["CCAT","inverse_vvl"]):
     
     return dataframe
 
-# %% ../nbs/00_score.ipynb 18
+# %% ../nbs/00_score.ipynb 19
 def compute_distdeg(input_df, dim_name = ["phate1","phate2"], split_by="curatedCLUST", 
     knn=30, distance_mode = "centroid", distance_metric = "manhattan", scale = True, inv_degree=True,
     plot=False, rmv_outliers=False):
@@ -94,7 +94,7 @@ def compute_distdeg(input_df, dim_name = ["phate1","phate2"], split_by="curatedC
 
 
 
-# %% ../nbs/00_score.ipynb 19
+# %% ../nbs/00_score.ipynb 20
 def bycluster_median(dataframe, param_dict):
 
     dataframe["potency_med"] = dataframe.groupby(by=param_dict["cluster"]
@@ -104,7 +104,7 @@ def bycluster_median(dataframe, param_dict):
 
     return dataframe
 
-# %% ../nbs/00_score.ipynb 20
+# %% ../nbs/00_score.ipynb 21
 def compute_vr_scores(dataframe, param_dict, global_dist = False):
 
     cond_dfs = []
