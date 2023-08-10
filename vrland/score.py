@@ -27,9 +27,9 @@ def scale_metrics(dataframe, metrics = ["CCAT","inverse_vvl"]):
     return dataframe
 
 # %% ../nbs/00_score.ipynb 19
-def compute_distdeg(input_df, dim_name = ["phate1","phate2"], split_by="curatedCLUST", 
-    knn=30, distance_mode = "centroid", distance_metric = "manhattan", scale = True, inv_degree=True,
-    plot=False, rmv_outliers=False):
+def compute_distdeg(input_df, dim_name = ["phate1","phate2"], 
+    split_by="curatedCLUST", knn=30, distance_mode = "centroid", 
+    distance_metric = "manhattan", scale = True, plot=False, rmv_outliers=False):
     """
     Computes distances and degrees of cells within a cluster.
     Results will get scaled within the cluster level so it handles them as independent entities.
@@ -50,7 +50,8 @@ def compute_distdeg(input_df, dim_name = ["phate1","phate2"], split_by="curatedC
     for i in input_df[split_by].unique():
         df_dist = input_df.loc[input_df[split_by]==i,dim_name]
         #Knn param is key and must be tunned according to the size of the cluster
-        G = graphtools.Graph(df_dist.values, knn=knn, decay=None, distance=distance_metric)
+        G = graphtools.Graph(df_dist.values, knn=knn, decay=None, 
+            distance=distance_metric)
         df_dist["deg"] = G.to_pygsp().d
         
         if distance_mode == "alphashape":
@@ -107,29 +108,34 @@ def bycluster_median(dataframe, param_dict):
 # %% ../nbs/00_score.ipynb 21
 def compute_vr_scores(dataframe, param_dict, global_dist = False):
 
+    import pandas as pd, numpy as np
+
     cond_dfs = []
 
     if global_dist == True:
         dist_df = compute_distdeg(dataframe, dim_name = param_dict["dim_names"], 
             split_by=param_dict["cluster"], distance_mode = "alphashape", 
             knn=5, plot=False, rmv_outliers=False)
-        dataframe = pd.merge(dataframe, dist_df.sort_index(), how="left", on=param_dict["dim_names"])
+        dataframe = pd.merge(dataframe, dist_df.sort_index(), how="left",
+            on=param_dict["dim_names"])
 
     for s in dataframe[param_dict["condition"]].unique():
         print (s)
         condition_data = dataframe.loc[dataframe[param_dict["condition"]]==s]
         
         if global_dist == False:
-            dist_df = compute_distdeg(condition_data, dim_name = param_dict["dim_names"], 
+            dist_df = compute_distdeg(condition_data, 
+                dim_name = param_dict["dim_names"], 
                 split_by=param_dict["cluster"], distance_mode = "alphashape", 
                 knn=5, plot=False, rmv_outliers=False)
-            condition_data = pd.merge(condition_data, dist_df.sort_index(), how="left", on=param_dict["dim_names"])
+            condition_data = pd.merge(condition_data, dist_df.sort_index(), 
+                how="left", on=param_dict["dim_names"])
 
         condition_data = bycluster_median(condition_data, param_dict)
         
         condition_data["VR"] = condition_data.apply(
-        lambda x: 0.9*x["potency_med"]+0.1*(x["dynamic_med"]*x["dist_scaled"]),
-        axis=1)
+            lambda x: 0.9*x["potency_med"]+0.1*(x["dynamic_med"]*x["dist_scaled"]),
+            axis=1)
         print(condition_data.columns)
         cond_dfs.append(condition_data)
     
