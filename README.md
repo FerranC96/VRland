@@ -6,9 +6,17 @@ This file will become the README and documentation index for the
 upcoming standalone implementation of the *Valley-Ridge* score
 landscapes.
 
+**VRland** allows to visualise single-cell differentiation processes on
+a Waddington-like landscape by combining the global cellular
+relationships captured by PHATE as ‘longitude and latitude’ axes, with a
+Valley-Ridge (VR) score based on cellular pluripotency and RNA velocity.
+The resulting VR landscape altitude captures the differentiation
+potential of a cell population, with the valley-ridge topology
+delineating local plasticity.
+
 For an example of the current implementation as a single Jupyter
 Notebook, please see the work on [Qin & Cardoso Rodriguez *et al.*
-2023](https://doi.org/10.1101/2023.02.15.528008) and its [associated
+2023](https://doi.org/10.1101/2023.02.15.528008) and it’s [associated
 GitHub
 repository](https://github.com/TAPE-Lab/Qin-CardosoRodriguez-et-al) (VR
 score and landscape generation can be found within the Figure 7
@@ -16,10 +24,14 @@ directory).
 
 ## Install
 
+Currently, the pre-release VRland tool can be used by cloning its GitHub
+repository and locally installing the package from the repo root
+directory with:
+
 ``` sh
-pip install vrland
+pip install -e ".[dev]"    
 ```
 
 ## How to use
 
-Fill me in please! Don’t forget code examples:
+A brief tutorial will be coming soon…
