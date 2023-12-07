@@ -22,7 +22,24 @@ repository](https://github.com/TAPE-Lab/Qin-CardosoRodriguez-et-al) (VR
 score and landscape generation can be found within the Figure 7
 directory).
 
-## Install
+This repository contains a development version of VRland where
+additional distance metrics to determine the Ridge component will be
+explored.
+
+Ultimately, the aim is to deploy this notebook-based tool as an
+interactive web-app.
+
+## How to use
+
+A brief tutorial will be coming soon…
+
+For now refer to the individual score and landscape notebooks in this
+repo, or to the work on [Qin & Cardoso Rodriguez *et al.*
+2023](https://doi.org/10.1101/2023.02.15.528008) and it’s [associated
+GitHub
+repository](https://github.com/TAPE-Lab/Qin-CardosoRodriguez-et-al).
+
+### Install
 
 Currently, the pre-release VRland tool can be used by cloning its GitHub
 repository and locally installing the package from the repo root
@@ -32,6 +49,4 @@ directory with:
 pip install -e ".[dev]"    
 ```
 
-## How to use
-
-A brief tutorial will be coming soon…
+It will eventually be available on Python Package Index.
